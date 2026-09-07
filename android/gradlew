@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+set -eu
+BASE_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+GRADLE_VERSION=9.6
+CACHE_DIR="${GRADLE_USER_HOME:-$HOME/.gradle}/nexus-wrapper"
+HOME_DIR="$CACHE_DIR/gradle-$GRADLE_VERSION"
+ZIP="$CACHE_DIR/gradle-$GRADLE_VERSION-bin.zip"
+if [ ! -x "$HOME_DIR/bin/gradle" ]; then
+  mkdir -p "$CACHE_DIR"
+  if [ ! -f "$ZIP" ]; then
+    if command -v curl >/dev/null 2>&1; then curl -fL "https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip" -o "$ZIP";
+    elif command -v wget >/dev/null 2>&1; then wget -O "$ZIP" "https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip";
+    else echo "Instale curl/wget ou abra o projeto no Android Studio." >&2; exit 1; fi
+  fi
+  (cd "$CACHE_DIR" && unzip -qo "$ZIP")
+fi
+exec "$HOME_DIR/bin/gradle" -p "$BASE_DIR" "$@"

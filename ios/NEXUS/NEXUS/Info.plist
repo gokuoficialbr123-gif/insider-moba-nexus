@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key><string>NEXUS Insider</string>
+    <key>CFBundleIdentifier</key><string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleName</key><string>$(PRODUCT_NAME)</string>
+    <key>CFBundleShortVersionString</key><string>$(MARKETING_VERSION)</string>
+    <key>CFBundleVersion</key><string>$(CURRENT_PROJECT_VERSION)</string>
+    <key>LSRequiresIPhoneOS</key><true/>
+    <key>NSCameraUsageDescription</key><string>O NEXUS usa a câmera somente quando você escolhe criar ou enviar mídia.</string>
+    <key>NSMicrophoneUsageDescription</key><string>O NEXUS usa o microfone somente quando você escolhe gravar áudio ou vídeo.</string>
+    <key>NSLocationWhenInUseUsageDescription</key><string>O NEXUS solicita localização somente quando você ativa um recurso que precisa dela e enquanto o app está em uso.</string>
+    <key>NSPhotoLibraryUsageDescription</key><string>O NEXUS acessa sua biblioteca somente quando você escolhe uma foto ou vídeo para enviar.</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLName</key><string>com.nexus.cyberforge</string>
+            <key>CFBundleURLSchemes</key><array><string>nexus</string></array>
+        </dict>
+    </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIRequiresFullScreen</key><true/>
+    <key>UILaunchScreen</key><dict/>
+</dict>
+</plist>
