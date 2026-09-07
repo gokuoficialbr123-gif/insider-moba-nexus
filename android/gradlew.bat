@@ -1,6 +1,6 @@
 @echo off
 setlocal
-set GRADLE_VERSION=9.6
+set GRADLE_VERSION=9.6.0
 set CACHE_DIR=%USERPROFILE%\.gradle\nexus-wrapper
 set GRADLE_HOME=%CACHE_DIR%\gradle-%GRADLE_VERSION%
 set ZIP=%CACHE_DIR%\gradle-%GRADLE_VERSION%-bin.zip
